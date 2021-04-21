@@ -1,0 +1,62 @@
+Executing: program /usr/bin/ssh host ec2-54-183-192-90.us-west-1.compute.amazonaws.com, user ubuntu, command scp -v -f /home/ubuntu/ftp_file
+OpenSSH_8.1p1, LibreSSL 2.7.3
+debug1: Reading configuration data /Users/yuditan/.ssh/config
+debug1: /Users/yuditan/.ssh/config line 2: Applying options for *
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 47: Applying options for *
+debug1: Connecting to ec2-54-183-192-90.us-west-1.compute.amazonaws.com port 22.
+debug1: Connection established.
+debug1: identity file /Users/yuditan/education/school/berkeley/semesters/Spring_Grad/cs268/final-project/VM4.pem type -1
+debug1: identity file /Users/yuditan/education/school/berkeley/semesters/Spring_Grad/cs268/final-project/VM4.pem-cert type -1
+debug1: identity file /Users/yuditan/.ssh/cs61b_id_rsa type -1
+debug1: identity file /Users/yuditan/.ssh/cs61b_id_rsa-cert type -1
+debug1: identity file /Users/yuditan/.ssh/id_rsa type 0
+debug1: identity file /Users/yuditan/.ssh/id_rsa-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_8.1
+debug1: Remote protocol version 2.0, remote software version OpenSSH_8.2p1 Ubuntu-4ubuntu0.2
+debug1: match: OpenSSH_8.2p1 Ubuntu-4ubuntu0.2 pat OpenSSH* compat 0x04000000
+debug1: Authenticating to ec2-54-183-192-90.us-west-1.compute.amazonaws.com:22 as 'ubuntu'
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ecdsa-sha2-nistp256
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: ecdsa-sha2-nistp256 SHA256:OXwbYuyB4790x671POHphw6VHQrn7dvHXHfBzkuLrOo
+debug1: Host 'ec2-54-183-192-90.us-west-1.compute.amazonaws.com' is known and matches the ECDSA host key.
+debug1: Found key in /Users/yuditan/.ssh/known_hosts:37
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /Users/yuditan/education/school/berkeley/semesters/Spring_Grad/cs268/final-project/VM4.pem  explicit
+debug1: Will attempt key: /Users/yuditan/.ssh/cs61b_id_rsa  explicit
+debug1: Will attempt key: /Users/yuditan/.ssh/id_rsa RSA SHA256:/o4ieZ3wt5wlkdnN545jEMMwkFL9vUALV8+LuWR960k explicit
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519,sk-ssh-ed25519@openssh.com,ssh-rsa,rsa-sha2-256,rsa-sha2-512,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ecdsa-sha2-nistp256@openssh.com>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Trying private key: /Users/yuditan/education/school/berkeley/semesters/Spring_Grad/cs268/final-project/VM4.pem
+debug1: Authentication succeeded (publickey).
+Authenticated to ec2-54-183-192-90.us-west-1.compute.amazonaws.com ([54.183.192.90]:22).
+debug1: channel 0: new [client-session]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: network
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: Remote: /home/ubuntu/.ssh/authorized_keys:1: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
+debug1: Sending environment.
+debug1: Sending command: scp -v -f /home/ubuntu/ftp_file
+Sending file modes: C0664 104857600 ftp_file
+Sink: C0664 104857600 ftp_file
+debug1: client_input_channel_req: channel 0 rtype exit-status reply 0
+debug1: client_input_channel_req: channel 0 rtype eow@openssh.com reply 0
+debug1: channel 0: free: client-session, nchannels 1
+debug1: fd 0 clearing O_NONBLOCK
+debug1: fd 2 clearing O_NONBLOCK
+Transferred: sent 20496, received 104982412 bytes, in 58.3 seconds
+Bytes per second: sent 351.4, received 1799861.8
+debug1: Exit status 0
